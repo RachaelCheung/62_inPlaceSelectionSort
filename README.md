@@ -14,16 +14,20 @@ is done in-place.
 
 0. If the number of the elements in the input triples,
 the time required to run the reigning champ algorithm
-will grow by __________________.
+will grow by three times. The number of elements tripled,
+so the number of comparisons needed would triple respectively. 
 [Justify, in about 2 sentences.]
 
 0. If the number of the elements in the input triples,
 the number of times that the reigning champ algorithm
 will be invoked 
-will grow by __________________.
+will grow by three times. In the constructor, the reigning champ
+algorithm is invoked once for each element in the input, so if 
+the number of elements triples, the invocations would triple respectively as well.
 [Justify, in about 2 sentences.]
 
 0. If the number of the elements in the input triples,
 the time required for the selection sort
-will grow by __________________.
+will grow by three times. As noted in the previous question, the 
+number of invocations will triple, so the time required for the sort would triple respectively. 
 [Justify, in about 2 sentences.]
