@@ -17,14 +17,20 @@ public class OrderedList_inArraySlots
      */
     public OrderedList_inArraySlots
             ( ArrayList<Integer> unordered) {
-        this();  // violates the directions for this hw
         
-        System.out.println( 
-            "Change this to report on progress."
-          + System.lineSeparator()
-          + "You were going to do that even without prompting, right?"
-          );
+		list_iAS = unordered;
+		
+    	for (int index = 0; index < list_iAS.size(); index ++) {
+			int nextLargerAt = champIndex(unordered, index);
+			Integer temp = unordered.get(index);
+			
+			list_iAS.set(index, unordered.get(nextLargerAt));
+			list_iAS.set(nextLargerAt, temp);
+		}
+		
     }
+	
+
 
 
     /** 
@@ -32,9 +38,21 @@ public class OrderedList_inArraySlots
       Write good English here, reflecting good thinking.
       @return ??
      */
-     private int champIndex() {
-        return 0;  // replace this line
-     }
+	 
+	 private int champIndex( ArrayList<Integer> challengers, int currentIndex) {
+
+		int minIndex = 0;
+		Integer minNum = Integer.MAX_VALUE;
+		
+		for (int index = currentIndex; index < challengers.size(); index ++){
+			if (challengers.get(index) != null 
+									&& challengers.get(index) < minNum){
+				minIndex = index;
+				minNum = challengers.get(index);
+			}
+		}
+		return minIndex;
+}
 
 
     // ------ code from previous assignments below here ----
